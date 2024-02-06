@@ -2,14 +2,12 @@
 
 namespace StudentsAPI.Entities
 {
-    public class Students
+    public class Student
     {
         [Key]
         public int StudentId {  get; set; }
         public string? StudentName { get; set;}
         public int? StudentAge { get; set; }
-        public string? StudentStandard {  get; set; }
-        public string? StudentEmail { get; set; }
 
     }
 }

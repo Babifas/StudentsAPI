@@ -11,9 +11,9 @@ using StudentsAPI.Data;
 
 namespace StudentsAPI.Migrations
 {
-    [DbContext(typeof(ApDbContext))]
-    [Migration("20240206025746_InitialDbSetup")]
-    partial class InitialDbSetup
+    [DbContext(typeof(StudentDbContext))]
+    [Migration("20240206061727_migration1")]
+    partial class migration1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace StudentsAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("StudentsAPI.Entities.Students", b =>
+            modelBuilder.Entity("StudentsAPI.Entities.Student", b =>
                 {
                     b.Property<int>("StudentId")
                         .ValueGeneratedOnAdd()
@@ -36,13 +36,7 @@ namespace StudentsAPI.Migrations
                     b.Property<int?>("StudentAge")
                         .HasColumnType("int");
 
-                    b.Property<string>("StudentEmail")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("StudentName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StudentStandard")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("StudentId");

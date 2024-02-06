@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using StudentsAPI.Data;
+using StudentsAPI.Repositories;
 
 namespace StudentsAPI
 {
@@ -20,8 +21,8 @@ namespace StudentsAPI
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-            
 
+            builder.Services.AddScoped<IStudentService, StudentService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

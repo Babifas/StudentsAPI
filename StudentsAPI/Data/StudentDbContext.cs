@@ -9,9 +9,6 @@ namespace StudentsAPI.Data
         {
 
         }
-        public DbSet<Students> StudentRegister { get; set; }
-
-
-
+        public DbSet<Student> StudentRegister { get; set; }
     }
 }
