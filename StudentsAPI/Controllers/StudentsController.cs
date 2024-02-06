@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using StudentsAPI.Entities;
 
 namespace StudentsAPI.Controllers
 {
@@ -7,7 +8,9 @@ namespace StudentsAPI.Controllers
     [ApiController]
     public class StudentsController : ControllerBase
     {
-        
+
+        [HttpGet]
+      
 
     }
 }
