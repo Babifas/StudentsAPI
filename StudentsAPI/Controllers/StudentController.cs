@@ -25,7 +25,7 @@ namespace StudentsAPI.Controllers
             return Ok(_studentService.GetStudentById(id));
         }
         [HttpPost]
-        public IActionResult AddStudent(Student student)
+        public IActionResult AddStudent([FromBody] Student student)
         {
             _studentService.AddStudent(student);
             return Ok("Added succeesfully");
